@@ -1,0 +1,25 @@
+// project/
+// │
+// ├── routes/
+// │   ├── document.js       # Routes for document-related operations
+// │   ├── register.js       # Routes for user registration and login
+// │
+// ├── config/
+// │   ├── database.js       # Database connection configuration
+// │
+// ├── uploads/              # Static folder for uploaded files
+// │
+// ├── app.js                # Main entry point of the app
+// │
+// ├── package.json
+// │
+// └── .env                  # Environment variables (optional for better security)
+
+// note
+
+// How This Works
+// Modularization: Routes are separated into individual modules (document and register), and database configuration is in a central location (database.js).
+// Reusability: The database connection can be reused across all modules.
+// File Uploads: File uploads are handled by multer in the document routes.
+// Static Files: Uploaded files in the uploads directory are served statically using express.static.
+// Middlewares: body-parser parses JSON and URL-encoded payloads, while cors enables cross-origin requests.
